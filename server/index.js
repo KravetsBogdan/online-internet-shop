@@ -76,7 +76,18 @@ app.use('/api/partners', partners);
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));
-
+  // app.use((req, res, next) => {
+  //   const allowedOrigins = ['https://tests-client.vercel.app/', 'http://localhost:8020', 'http://127.0.0.1:9000', 'http://localhost:9000'];
+  //   const origin = req.headers.origin;
+  //   if (allowedOrigins.includes(origin)) {
+  //        res.setHeader('Access-Control-Allow-Origin', origin);
+  //   }
+  //   //res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:8020');
+  //   res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  //   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  //   res.header('Access-Control-Allow-Credentials', true);
+  //   return next();
+  // });
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });

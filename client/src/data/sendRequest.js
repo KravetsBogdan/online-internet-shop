@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseApiUrl = "/api";
+const baseApiUrl = "https://tests-red.vercel.app/api";
 
 // Функція для відправки запитів
 const sendRequest = async (method, endpoint, data = null, token = null) => {
