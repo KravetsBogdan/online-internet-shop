@@ -1,8 +1,0 @@
-#!/bin/sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-# Змінна, яка вказує на папку зі сирцями для лінтування і форматування
-SOURCE_DIR="client/"
-
-# Лінтування вказаної папки
-cd "$SOURCE_DIR" && npm run lint && npm run format
