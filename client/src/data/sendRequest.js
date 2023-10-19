@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseApiUrl = "https://online-internet-shop-tz-api.vercel.app/api";
+// const baseApiUrl = "https://online-internet-shop-tz-api.vercel.app/api";
+const baseApiUrl = "https://tests-khaki-pi.vercel.app/api";
 
 // Функція для відправки запитів
 const sendRequest = async (method, endpoint, data = null, token = null) => {
